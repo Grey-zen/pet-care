@@ -815,7 +815,7 @@ p{
  Hero Left
 ==============================*/
 
-.hero-content{
+.hero-wrapper{
 
     position:relative;
 
@@ -2226,9 +2226,8 @@ p{
 
 .hero-image:hover img{
 
-    transform:scale(1.06);
-
-    filter:saturate(1.05);
+    transform:scale(1.05) rotate(.4deg);
+}
 
 }
 
@@ -3121,12 +3120,6 @@ p{
   Interactive Image
 =========================================*/
 
-.hero-image:hover img{
-
-    transform:
-
-        scale(1.05)
-        rotate(.4deg);
 
 }
 
@@ -8072,7 +8065,7 @@ p{
 
     }
 
-    .hero-content{
+    .hero-wrapper{
 
         grid-template-columns:1fr;
 
@@ -9585,13 +9578,12 @@ li{
  Content Visibility
 =========================================*/
 
+/*
 section{
-
     content-visibility:auto;
-
     contain-intrinsic-size:700px;
-
 }
+*/
 
 /*=========================================
  Optimize Large Sections

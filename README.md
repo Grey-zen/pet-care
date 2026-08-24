@@ -1,1 +1,1 @@
-# pet-care-japan
+# pet-care

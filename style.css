@@ -45,6 +45,10 @@ button{cursor:pointer}
 .site-header{position:sticky;top:0;z-index:50;background:rgba(5,14,9,.82);backdrop-filter:blur(18px);border-bottom:1px solid transparent;transition:.25s}
 .site-header.scrolled{border-color:var(--line);box-shadow:0 12px 30px rgba(0,0,0,.18)}
 .header-inner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+
+.brand-logo{width:34px;height:34px;display:block;object-fit:contain;border-radius:50%;filter:drop-shadow(0 0 8px rgba(86,211,99,.38))}
+.footer-brand .brand-logo{width:36px;height:36px}
+
 .brand{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:14px;white-space:nowrap}
 .brand-mark{display:grid;place-items:center;width:26px;height:26px;border-radius:8px;background:var(--green);color:#0a1b0e;font-size:14px;box-shadow:0 5px 18px rgba(86,211,99,.25)}
 .main-nav{display:flex;align-items:center;gap:27px;margin-left:auto}

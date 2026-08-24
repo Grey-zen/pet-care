@@ -284,7 +284,13 @@ const Scroll = {
 
                 if (targetID === "#") return;
 
-                const target = document.querySelector(targetID);
+                let target = null;
+
+                try {
+                    target = document.querySelector(targetID);
+                } catch {
+                    return;
+                }
 
                 if (!target) return;
 
@@ -658,8 +664,7 @@ const HeroEffects = {
 
                 const y = Math.sin(time * speed) * 8 + offset;
 
-                card.style.transform =
-                    `translateY(${y}px)`;
+                card.style.setProperty("--float-y", `${y}px`);
 
                 requestAnimationFrame(animate);
 
@@ -771,7 +776,9 @@ const ProgressBar = {
             document.documentElement.scrollHeight -
             document.documentElement.clientHeight;
 
-        const progress = (scrollTop / height) * 100;
+        const progress = height > 0
+            ? Math.min(100, Math.max(0, (scrollTop / height) * 100))
+            : 0;
 
         this.bar.style.width = progress + "%";
 
@@ -854,7 +861,7 @@ const Forms = {
 
             input.focus();
 
-            alert("有効なメールアドレスを入力してください。");
+            alert("Please enter a valid email address.");
 
             return;
 
@@ -864,7 +871,7 @@ const Forms = {
 
         event.target.reset();
 
-        alert("ご登録ありがとうございます。");
+        alert("Thank you for subscribing.");
 
     },
 
